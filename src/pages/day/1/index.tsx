@@ -32,52 +32,38 @@ const originalCardList: ItemType[] = [
   },
 ]
 
-const useExpand = () => {
-  const state = useReactive({
-    expandList: [true, ...new Array<boolean>(originalCardList.length - 1).fill(false)],
-  })
-
-  const expand = (index: number) => {
-    state.expandList = new Array<boolean>(originalCardList.length).fill(false)
-    state.expandList[index] = true
-  }
-
-  return {
-    expand: useMemoizedFn(expand),
-    expandList: state.expandList,
-  }
-}
-
-const CardItem = ({ cardItem, expand, onClick }: { cardItem: ItemType; expand: boolean } & Partial<JSX.IntrinsicElements['button']>) => {
+const CardItem = ({ cardItem, expand, onClick }: { cardItem: ItemType;expand: boolean } & Partial<JSX.IntrinsicElements['button']>) => {
   return (
-    <button className={expand ? 'grow-5' : 'grow-0.8'} onClick={onClick}
-      relative transition-all-600 basis-0 mx-2
-    >
-      <img src={cardItem.source} alt={cardItem.title} h-80vh object-cover rounded-10vh shadow="gray2 dark:sm" />
-      <h3 absolute left-20px bottom-40px text="xl left white" font-extrabold transition-all-50
-        className={expand ? 'visible' : 'invisible'}
-      >
+    <button relative mx-2 basis-0 transition-all-600 className={expand ? 'grow-5' : 'grow-0.6'} onClick={onClick}>
+      <img src={cardItem.source} alt={cardItem.title} h-80vh object-cover rounded-50px shadow="gray2 dark:sm" />
+      <h3 absolute left-20px bottom-40px text="xl left white" font-extrabold transition="all-600 delay-100" className={expand ? 'op100' : 'op0'}>
         {cardItem.title}
       </h3>
     </button>
   )
 }
 
-const ExpandingCards = () => {
-  const { expand, expandList } = useExpand()
+const ExpandingCardsPage = () => {
+  const [expandIndex, setExpandIndex] = useState(0)
   const responsive = useResponsive()
 
   let cardList = originalCardList
   if (!responsive.md) {
+    // 响应式处理，屏幕小的时候去掉最后两张卡片
     cardList = originalCardList.slice(0, cardList.length - 2)
   }
 
   return (
     <div flex items-center justify-center>
-      <div flex items-center className="w-90% !md:w-96%">
+      <div flex items-center className="w-96% md:w-90%">
         {
           cardList.map((cardItem, index) => (
-            <CardItem cardItem={cardItem} key={index} onClick={() => expand(index)} expand={expandList[index]} />
+            <CardItem
+              cardItem={cardItem}
+              key={index}
+              expand={expandIndex === index}
+              onClick={() => setExpandIndex(index)}
+            />
           ))
         }
       </div>
@@ -85,4 +71,4 @@ const ExpandingCards = () => {
   )
 }
 
-export default ExpandingCards
+export default ExpandingCardsPage

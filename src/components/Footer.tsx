@@ -10,7 +10,7 @@ const Footer = () => {
       <a
         icon-btn i-carbon-logo-github
         rel="noreferrer"
-        href="https://github.com/flower-f/revitesse-lite"
+        href="https://github.com/Flower-F/50projects50days"
         target="_blank"
         title="GitHub"
       >
