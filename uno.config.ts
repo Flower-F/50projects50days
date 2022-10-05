@@ -17,7 +17,7 @@ export default defineConfig({
     transformerAttributifyJsx(),
   ],
   safelist: [
-    'grow-0.5',
+    'grow-0.6',
     'grow-5',
     'visible',
     'invisible',
