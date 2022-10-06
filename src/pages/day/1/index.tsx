@@ -34,12 +34,14 @@ const originalCardList: ItemType[] = [
 
 const CardItem = ({ cardItem, expand, onClick }: { cardItem: ItemType;expand: boolean } & Partial<JSX.IntrinsicElements['button']>) => {
   return (
-    <button relative mx-2 basis-0 transition-all-600 className={expand ? 'grow-5' : 'grow-0.6'} onClick={onClick}>
-      <img src={cardItem.source} alt={cardItem.title} h-80vh object-cover rounded-50px shadow="gray2 dark:sm" />
-      <h3 absolute left-20px bottom-40px text="xl left white" font-extrabold transition="all-600 delay-100" className={expand ? 'op100' : 'op0'}>
-        {cardItem.title}
-      </h3>
-    </button>
+    <li className={expand ? 'grow-5' : 'grow-0.6'} mx-2 basis-0 relative transition-all-600>
+      <button onClick={onClick}>
+        <img src={cardItem.source} alt={cardItem.title} h-80vh object-cover rounded-50px shadow="gray2 dark:sm" />
+        <h3 absolute left-20px bottom-40px text="xl left white" font-extrabold transition="all-600 delay-100" className={expand ? 'op100' : 'op0'}>
+          {cardItem.title}
+        </h3>
+      </button>
+    </li>
   )
 }
 
@@ -55,7 +57,7 @@ const ExpandingCardsPage = () => {
 
   return (
     <div flex items-center justify-center>
-      <div flex items-center className="w-96% md:w-90%">
+      <ul flex items-center className="w-96% md:w-90%">
         {
           cardList.map((cardItem, index) => (
             <CardItem
@@ -66,7 +68,7 @@ const ExpandingCardsPage = () => {
             />
           ))
         }
-      </div>
+      </ul>
     </div>
   )
 }

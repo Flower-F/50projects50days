@@ -21,5 +21,7 @@ export default defineConfig({
     'grow-5',
     'visible',
     'invisible',
+    'op100',
+    'op0',
   ],
 })
