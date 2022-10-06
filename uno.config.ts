@@ -19,9 +19,14 @@ export default defineConfig({
   safelist: [
     'grow-0.6',
     'grow-5',
-    'visible',
-    'invisible',
     'op100',
     'op0',
+    'w-80px',
+    'w-0',
+    'h-4px',
+    'bg-gray',
+    'bg-blue',
+    'border-gray',
+    'border-blue',
   ],
 })
