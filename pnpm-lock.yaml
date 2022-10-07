@@ -5,6 +5,7 @@ specifiers:
   '@commitlint/cli': ^17.1.2
   '@commitlint/config-conventional': ^17.1.0
   '@iconify-json/carbon': ^1.1.8
+  '@iconify-json/charm': ^1.1.5
   '@testing-library/react': ^13.4.0
   '@testing-library/react-hooks': ^8.0.1
   '@types/node': ^18.7.23
@@ -56,6 +57,7 @@ devDependencies:
   '@commitlint/cli': registry.npmmirror.com/@commitlint/cli/17.1.2
   '@commitlint/config-conventional': registry.npmmirror.com/@commitlint/config-conventional/17.1.0
   '@iconify-json/carbon': registry.npmmirror.com/@iconify-json/carbon/1.1.8
+  '@iconify-json/charm': registry.npmmirror.com/@iconify-json/charm/1.1.5
   '@testing-library/react': registry.npmmirror.com/@testing-library/react/13.4.0_biqbaboplfbrettd7655fr4n2y
   '@testing-library/react-hooks': registry.npmmirror.com/@testing-library/react-hooks/8.0.1_rj7ozvcq3uehdlnj3cbwzbi5ce
   '@types/node': registry.npmmirror.com/@types/node/18.7.23
@@ -806,6 +808,14 @@ packages:
     resolution: {integrity: sha512-aSoMgvZyvIXadLbMXcfS+qy8CVxSExvvp8Vd/nCrupLFc0KLKSukRInnVNc63zaHqoe1NBf5xUrgfyRYYfaKWQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@iconify-json/carbon/-/carbon-1.1.8.tgz}
     name: '@iconify-json/carbon'
     version: 1.1.8
+    dependencies:
+      '@iconify/types': registry.npmmirror.com/@iconify/types/2.0.0
+    dev: true
+
+  registry.npmmirror.com/@iconify-json/charm/1.1.5:
+    resolution: {integrity: sha512-HdvJGpbzjlaF6z8Tpv1Ar42K0vZANglrxgHuNBeCt182N1BUQqRFbMGg19XJ4UWZRPXLtMoTRW/HvuPY6UpDUQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@iconify-json/charm/-/charm-1.1.5.tgz}
+    name: '@iconify-json/charm'
+    version: 1.1.5
     dependencies:
       '@iconify/types': registry.npmmirror.com/@iconify/types/2.0.0
     dev: true

@@ -26,7 +26,6 @@ export default defineConfig(({ mode }) => {
           'react',
           'react-router-dom',
           'ahooks',
-          'react-i18next',
         ],
         dts: true,
         dirs: [

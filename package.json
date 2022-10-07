@@ -27,6 +27,7 @@
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@iconify-json/carbon": "^1.1.8",
+    "@iconify-json/charm": "^1.1.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/react-hooks": "^8.0.1",
     "@types/node": "^18.7.23",

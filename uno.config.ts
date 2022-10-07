@@ -28,5 +28,10 @@ export default defineConfig({
     'bg-blue',
     'border-gray',
     'border-blue',
+    '-translate-x-120px',
+    '-translate-x-140px',
+    '-translate-x-190px',
+    '-rotate-18',
+    '-rotate-90',
   ],
 })
