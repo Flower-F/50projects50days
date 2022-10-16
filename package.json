@@ -1,8 +1,8 @@
 {
-  "name": "revitesse-lite",
+  "name": "50projects50days-react",
   "private": true,
   "version": "0.0.1",
-  "packageManager": "pnpm@7.11.0",
+  "packageManager": "pnpm@7.13.3",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
