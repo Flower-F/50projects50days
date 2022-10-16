@@ -35,9 +35,9 @@ const BlurryLoadingPage = () => {
   }, [blurring, loadingNum])
 
   return (
-    <div flex items-center justify-center h-90vh>
-      <div bg-black p-10px relative shadow-gray shadow-sm rounded-2>
-        <img src={bg} alt="" w="70%" object-cover ref={backgroundRef} />
+    <div flex items-center justify-center h-60vh>
+      <div bg-black p="x-10px y-30px" relative shadow-gray shadow-sm rounded-2 text-center>
+        <img src={bg} alt="" w="70%" object-cover inline-block ref={backgroundRef} />
         <div absolute top="1/2" left="1/2" text="white 4rem" font-bold className="-translate-x-1/2 -translate-y-1/2" ref={loadingNumRef}>
           {`${loadingNum}%`}
         </div>
